@@ -5,7 +5,7 @@ import Orb from './Components/Orb/Orb'
 import Navigation from "./Components/Navigation/Navigation";
 import React, { useMemo, useState } from "react";
 import Dashboard from "./Components/Dashboard/Dashboard";
-import Incomes from "./Components/Incomes/Incomes";
+import Incomes from "./Components/Income/Income";
 import Expenses from "./Components/Expenses/Expenses";
 import { useGlobalContext } from "./context/globalContext";
 
