@@ -39,6 +39,7 @@ function Form() {
 
     return (
         <FormStyled onSubmit={handleSubmit}>
+            {error && <p className='error'>{error}</p>}
             <div className='input-control'>
                 <input type ="text" value={title} name={'title'} placeholder='Salary Title' onChange={handleInput('title')}/>
             </div>
