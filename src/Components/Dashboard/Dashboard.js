@@ -8,11 +8,11 @@ import History from '../../History/History'
 
 
 function Dashboard() {
-    const {totalExpenses,incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
+    const { totalExpenses, income, expenses, totalIncome, totalBalance, getIncome, getExpense } = useGlobalContext()
 
     useEffect(() => {
-        getIncomes()
-        getExpenses()
+        getIncome()
+        getExpense()
     }, [])
 
     return (
@@ -45,24 +45,29 @@ function Dashboard() {
                     </div>
                     <div className="history-con">
                         <History />
-                        <h2 className="salary-title">Min <span>Salary</span>Max</h2>
-                        <div className="salary-item">
-                            <p>
-                                ${Math.min(...incomes.map(item => item.amount))}
-                            </p>
-                            <p>
-                                ${Math.max(...incomes.map(item => item.amount))}
-                            </p>
-                        </div>
-                        <h2 className="salary-title">Min <span>Expense</span>Max</h2>
-                        <div className="salary-item">
-                            <p>
-                                ${Math.min(...expenses.map(item => item.amount))}
-                            </p>
-                            <p>
-                                ${Math.max(...expenses.map(item => item.amount))}
-                            </p>
-                        </div>
+                        {
+                            income && income.length > 0 && (
+                                <>
+                                    <h2 className="salary-title">Min <span>Salary</span>Max</h2>
+                                    <div className="salary-item">
+                                        <p>${Math.min(...income.map(item => item.amount))}</p>
+                                        <p>${Math.max(...income.map(item => item.amount))}</p>
+                                    </div>
+                                </>
+                            )
+                        }
+
+                        {
+                            expenses && expenses.length > 0 && (
+                                <>
+                                    <h2 className="salary-title">Min <span>Expense</span>Max</h2>
+                                    <div className="salary-item">
+                                        <p>${Math.min(...expenses.map(item => item.amount))}</p>
+                                        <p>${Math.max(...expenses.map(item => item.amount))}</p>
+                                    </div>
+                                </>
+                            )
+                        }
                     </div>
                 </div>
             </InnerLayout>

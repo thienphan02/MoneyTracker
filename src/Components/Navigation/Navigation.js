@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import avatar from '../../img/anime-face-png-7407.png'
 import { menuItems } from '../../utils/menuItems'
@@ -6,7 +6,7 @@ import { signout } from '../../utils/icon'
 
 
 
-function Navigation(active, setActive) {
+function Navigation({active, setActive}) {
     
     return (
         <NavStyled>
