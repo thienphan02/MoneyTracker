@@ -7,10 +7,10 @@ import ExpenseForm from './ExpenseForm';
 import Form from '../Form/Form';
 
 function Expenses() {
-    const {addIncome,expenses, getExpenses, deleteExpense, totalExpenses} = useGlobalContext()
+    const {addIncome,expenses, getExpense, deleteExpense, totalExpenses} = useGlobalContext()
 
     useEffect(() =>{
-        getExpenses()
+        getExpense()
     }, [])
     return (
         <ExpenseStyled>

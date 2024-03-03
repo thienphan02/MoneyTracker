@@ -1,5 +1,6 @@
 import styled from  "styled-components"
-import bg from "./img/1_Z1FpdzDRmqVZQUN2O00hQA.png"
+// import bg from "./img/1_Z1FpdzDRmqVZQUN2O00hQA.png"
+import bg from "./img/v822-aew-37.png"
 import {MainLayout} from './styles/Layouts'
 import Orb from './Components/Orb/Orb'
 import Navigation from "./Components/Navigation/Navigation";
